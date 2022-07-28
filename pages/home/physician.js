@@ -4,7 +4,7 @@ import img from "../../images/img2.jpg";
 
 const physician = () => {
   return (
-    <Container maxW="90%">
+    <Container maxW="90%" py="5rem">
       <Heading textAlign="center">
         {"Medical / Physician Billing Services"}
       </Heading>

@@ -3,6 +3,26 @@ import consultingServicesCard from "../images/consultingServicesCard.jpg";
 import hrAndAdminServicesCard from "../images/hrAndAdminServicesCard.jpg";
 import itServicesCard from "../images/itServicesCard.jpg";
 import rcmServicesCard from "../images/rcmServicesCard.jpg";
+
+export const navLinks = [
+  {
+    name: "Home",
+    path: "/",
+  },
+  {
+    name: "About",
+    path: "/about",
+  },
+  {
+    name: "Services",
+    path: "/services",
+  },
+  {
+    name: "Contact",
+    path: "/contact",
+  },
+];
+
 export const dummyData = [
   {
     id: 1,

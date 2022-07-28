@@ -4,7 +4,7 @@ import img from "../../images/medicalbilling-cover.jpg";
 
 const hme = () => {
   return (
-    <Container maxW="90%">
+    <Container maxW="90%" py="5rem">
       <Heading textAlign="center">
         {"HME / DME Billing Services– Analysis, Management, & Reporting"}
       </Heading>
