@@ -4,7 +4,7 @@ import Link from "next/link";
 import medicalBillingLogo from "../../images/medicalBillingLogo.png";
 import { navLinks } from "../../constants/constants";
 
-const activeStyle = { color: "#d33f3f" };
+const activeStyle = { color: "#e96c05" };
 const inactiveStyle = { color: "white" };
 let currentPath;
 
