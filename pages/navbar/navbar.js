@@ -1,24 +1,20 @@
 import React, { useEffect, useState } from "react";
-import { Box, Container, HStack, Text, Flex, Image } from "@chakra-ui/react";
+import { Box, HStack, Text, Flex, Image } from "@chakra-ui/react";
 import Link from "next/link";
 import medicalBillingLogo from "../../images/medicalBillingLogo.png";
 import { navLinks } from "../../constants/constants";
+import { useRouter } from "next/router";
 
 const activeStyle = { color: "#e96c05" };
 const inactiveStyle = { color: "white" };
-let currentPath;
 
 const Navbar = () => {
+  const router = useRouter();
   const [activeState, setActiveState] = useState("");
 
-  const handleNavClick = (value) => {
-    setActiveState(value);
-  };
-
   useEffect(() => {
-    currentPath = window.location.pathname;
-    setActiveState(currentPath);
-  }, []);
+    setActiveState(router.pathname);
+  }, [router.pathname]);
 
   return (
     <Box backgroundColor={"#242424"} textAlign="end">
@@ -39,10 +35,7 @@ const Navbar = () => {
                 }
               >
                 <Link href={link.path}>
-                  <Text
-                    cursor="pointer"
-                    onClick={() => handleNavClick(link.name)}
-                  >
+                  <Text cursor="pointer" _hover={activeStyle}>
                     {link.name}
                   </Text>
                 </Link>

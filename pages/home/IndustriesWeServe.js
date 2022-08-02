@@ -1,16 +1,24 @@
-import { Heading, Box, Flex, Button, Stack, Text } from "@chakra-ui/react";
+import {
+  Heading,
+  Box,
+  Container,
+  Flex,
+  Button,
+  Stack,
+  Text,
+} from "@chakra-ui/react";
 import React, { useState } from "react";
 import Link from "next/link";
 const IndustriesWeServe = () => {
   const [type, setType] = useState("HME");
 
-  const activeStyle = { backgroundColor: "#d33f3f" };
+  const activeStyle = { backgroundColor: "#e96c05" };
 
   const handleClick = (value) => {
     setType(value);
   };
   return (
-    <Box my="3rem">
+    <Container maxWidth="90%" my="3rem">
       <Heading textAlign="center">
         Industries We Serve for Medical Billing Management
       </Heading>
@@ -56,7 +64,7 @@ const IndustriesWeServe = () => {
               <Link href="/home/hme">
                 <Button
                   color="white"
-                  bgColor="#d33f3f"
+                  style={activeStyle}
                   _hover={{ bgColor: "#242424" }}
                 >
                   Learn More
@@ -79,7 +87,8 @@ const IndustriesWeServe = () => {
               <Link href="/home/physician">
                 <Button
                   color="white"
-                  bgColor="#d33f3f"
+                  style={activeStyle}
+                  // bgColor={}
                   _hover={{ bgColor: "#242424" }}
                 >
                   Learn More
@@ -89,7 +98,7 @@ const IndustriesWeServe = () => {
           )}
         </Box>
       </Flex>
-    </Box>
+    </Container>
   );
 };
 

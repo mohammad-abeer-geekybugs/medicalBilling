@@ -23,7 +23,7 @@ const MainVstackStyle = {
   alignItems: "start",
 };
 
-const Footer = () => {
+const Footer = (path, setPath) => {
   return (
     <VStack backgroundColor="#242424" fontSize="1.1rem" lineHeight="2.2rem">
       <HStack width="100%" color="white" spacing="10" py="4rem">
@@ -96,8 +96,16 @@ const Footer = () => {
       <Divider borderColor="gray" />
       <VStack>
         <HStack spacing={8}>
-          <Text color="orange.400">Terms of Use</Text>
-          <Text color="orange.400">Privacy Policy</Text>
+          <Link href="/privacy-policy">
+            <Text color="orange.400" cursor="pointer">
+              Terms of Use
+            </Text>
+          </Link>
+          <Link href="/privacy-policy">
+            <Text color="orange.400" cursor="pointer">
+              Privacy Policy
+            </Text>
+          </Link>
         </HStack>
         <Text color="white">@2022 Geekybugs, Inc. All rights reserved.</Text>
       </VStack>
