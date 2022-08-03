@@ -60,3 +60,33 @@ export const dummyData = [
     isHovering: false,
   },
 ];
+export const revenueCycleMainData = {
+  orderToIntake: [
+    "Scheduling",
+    "Pre-Registration",
+    "Clearance",
+    "Financial Counselling",
+    "Online/In-Person Arrival",
+    "Pre-Service Payments",
+  ],
+  careToClaim: [
+    "Level of Care",
+    "Case Management",
+    "Utilization Review",
+    "Charge Optimization",
+    "Coding",
+    "Acuity Capture",
+  ],
+  claimToPayment: [
+    "Billing",
+    "Patient Payments",
+    "Denials Management",
+    "Customer Service",
+    "Reconciliation",
+  ],
+};
+export const revenueCycleTitles = [
+  "ORDER TO INTAKE",
+  "CARE TO CLAIM",
+  "CLAIM TO PAYMENT",
+];

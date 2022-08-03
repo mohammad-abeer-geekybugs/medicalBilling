@@ -22,8 +22,11 @@ const IndustriesWeServe = () => {
       <Heading textAlign="center">
         Industries We Serve for Medical Billing Management
       </Heading>
-      <Flex>
-        <Stack flex="1" m="3rem">
+      <Flex direction={["column", "row", "row", "row"]}>
+        <Stack
+          width={["100%", "50%", "35%", "25%"]}
+          m={["0.5rem", "1rem", "1.5rem", "2rem"]}
+        >
           <Button
             backgroundColor="#242424"
             color="white"
@@ -43,7 +46,10 @@ const IndustriesWeServe = () => {
             Physician
           </Button>
         </Stack>
-        <Box flex="2" m="3rem">
+        <Box
+          width={["100%", "50%", "65%", "75%"]}
+          m={["0.5rem", "1rem", "1.5rem", "2rem"]}
+        >
           {type === "HME" ? (
             <Box>
               <Heading mb="1.5rem" size="md">
@@ -88,7 +94,6 @@ const IndustriesWeServe = () => {
                 <Button
                   color="white"
                   style={activeStyle}
-                  // bgColor={}
                   _hover={{ bgColor: "#242424" }}
                 >
                   Learn More

@@ -22,7 +22,7 @@ const ServicesWeSpecializeIn = () => {
           Services That We Specialize In
         </Heading>
         <Center>
-          <Wrap spacing="30px">
+          <Wrap spacing={["15px", "15px", "15px", "30px"]}>
             {data.map((item, index) => {
               return (
                 <WrapItem key={item.id}>
@@ -37,8 +37,8 @@ const ServicesWeSpecializeIn = () => {
                     <Box
                       borderRadius="8px"
                       style={{ backgroundColor: "rgba(0, 0, 0, 0.7)" }}
-                      minH="250px"
-                      minW="330px"
+                      minH={["100px", "150px", "200px", "250px"]}
+                      minW={["250px", "280px", "300px", "330px"]}
                       maxW="330px"
                       onMouseEnter={() => {
                         const newData = _.cloneDeep(data);
