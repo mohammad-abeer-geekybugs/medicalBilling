@@ -1,8 +1,13 @@
-import { Box } from "@chakra-ui/react";
+import { Box, Container } from "@chakra-ui/react";
 import React from "react";
+import ContactForm from "./ContactForm";
 
 const contact = () => {
-  return <Box>contact</Box>;
+  return (
+    <Container minH="70vh">
+      <ContactForm />
+    </Container>
+  );
 };
 
 export default contact;

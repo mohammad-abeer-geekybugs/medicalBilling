@@ -90,3 +90,54 @@ export const revenueCycleTitles = [
   "CARE TO CLAIM",
   "CLAIM TO PAYMENT",
 ];
+
+export const servicesWeProvide = [
+  {
+    title: "Patient Information Download",
+    text: "Accurately collect, review and process vital patient information",
+  },
+  {
+    title: "Obtaining Authorization",
+    text: "Automated appointment scheduling solutions like Appoint360 to improve care access",
+  },
+  {
+    title: "Sales Order Confirmation",
+    text: "Single or multiple sales order confirmation to transmit or print the invoice appropriately",
+  },
+  {
+    title: "Denial Management",
+    text: "Work around denied claims through accurate resubmissions",
+  },
+  {
+    title: "Patient Creation",
+    text: "Clinical documentation covering medical history and insurance coverages",
+  },
+  {
+    title: "Insurance eligibility verification",
+    text: "Determine procedure-specific coverage and benefits",
+  },
+  {
+    title: "Creating Sales Orders",
+    text: "Create clean and error-free sales orders to improve outcomes",
+  },
+  {
+    title: "Reviewing & Logging CMNs",
+    text: "Timely completion and logging of CMNs before sales order confirmation",
+  },
+  {
+    title: "Claims submission",
+    text: "Submit claims of billable fees to insurance companies",
+  },
+  {
+    title: "Payment Posting",
+    text: "Payer will send either an EOB or an ERA towards the payment of a claim",
+  },
+  {
+    title: "AR Follow-up",
+    text: "Collect payments on pending claims from third party insurance",
+  },
+  {
+    title: "Transparent Reporting",
+    text: "Detailed weekly/ monthly reports evaluate performance of claims",
+  },
+];
