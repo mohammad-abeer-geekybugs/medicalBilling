@@ -32,9 +32,9 @@ const ServicesWeProvide = () => {
               ]}
               gap={6}
             >
-              {servicesWeProvide.map((item) => {
+              {servicesWeProvide?.map((item, keys) => {
                 return (
-                  <GridItem>
+                  <GridItem key={keys}>
                     <Flex>
                       <Icon w={7} h={7} as={ChevronRightIcon} mr="0.5rem" />
                       <Box>

@@ -3,6 +3,9 @@ import consultingServicesCard from "../images/consultingServicesCard.jpg";
 import hrAndAdminServicesCard from "../images/hrAndAdminServicesCard.jpg";
 import itServicesCard from "../images/itServicesCard.jpg";
 import rcmServicesCard from "../images/rcmServicesCard.jpg";
+import user1 from "../images/aboutUser1.jpg";
+import user2 from "../images/aboutUser2.jpg";
+import user3 from "../images/aboutUser3.jpg";
 
 export const navLinks = [
   {
@@ -139,5 +142,68 @@ export const servicesWeProvide = [
   {
     title: "Transparent Reporting",
     text: "Detailed weekly/ monthly reports evaluate performance of claims",
+  },
+];
+
+export const contactData = [
+  {
+    area: "California",
+    country: "USA",
+    phone: "+1 925 818 1066",
+    email: "alexis.rankin@geekybugs.com",
+    address: "1333 Howe Ave, Sacramento",
+  },
+  {
+    area: "Lahore",
+    country: "Pakistan",
+    phone: "+92 322 460 8989",
+    email: "muhammad.asad@geekybugs.com",
+    address: "2/7, Niaz View, Chuburji",
+  },
+  {
+    area: "London",
+    country: "UK",
+    phone: "*Please provide number*",
+    email: "uk@geekybugs.com",
+    address: "*Please provide address*",
+  },
+];
+
+export const whyMedicalBilling = [
+  "Collaborative Methodology",
+  "Confidentiality",
+  "Expert Workforce",
+  "Streamlined Operations",
+  "Compliance",
+  "Insights",
+  "Availability and Expediency",
+  "Specialty-Focus",
+  "Enhanced Customer Support",
+  "Dedicated Resources",
+  "Multiple Solutions",
+  "Value-Added Services",
+  "Technology-Enabled Solutions",
+  "Flexibility",
+  "Cost Efficiency",
+];
+
+export const ourLeaders = [
+  {
+    image: user1.src,
+    name: "User 1",
+    description: "user 1, has info1, came from Lahore",
+    link: "SEE MORE",
+  },
+  {
+    image: user2.src,
+    name: "User 2",
+    description: "user 2, has info2, came from Lahore",
+    link: "SEE MORE",
+  },
+  {
+    image: user3.src,
+    name: "User 3",
+    description: "user 3, has info3, came from Lahore",
+    link: "SEE MORE",
   },
 ];

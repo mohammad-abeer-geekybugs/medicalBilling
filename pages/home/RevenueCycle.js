@@ -9,9 +9,10 @@ import {
   Stack,
   Flex,
   Text,
+  Box,
 } from "@chakra-ui/react";
 import React from "react";
-import mainBanner from "../../images/mainBanner.jpg";
+import mainBanner from "../../images/mainBanner.png";
 import { IoCaretForward } from "react-icons/io5";
 import {
   revenueCycleMainData,
@@ -42,7 +43,9 @@ const RevenueCycle = () => {
           experience.
         </Text>
       </Container>
-      <Image src={mainBanner.src} />
+      <Box textAlign="-webkit-center">
+        <Image src={mainBanner.src} />
+      </Box>
       <Flex
         direction={["column", "column", "coloumn", "row", "row"]}
         alignItems={["center", "center", "center", "baseline", "baseline"]}

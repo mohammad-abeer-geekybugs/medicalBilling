@@ -12,14 +12,14 @@ const Home = () => {
       <Box
         minH={["40vh", "50vh", "60vh", "70vh"]}
         bgImage={coverImg.src}
-        opacity="55%"
+        opacity="85%"
         bgRepeat="no-repeat"
         bgPos="center"
         bgSize="cover"
       >
         <Box
           minH={["40vh", "50vh", "60vh", "70vh"]}
-          style={{ backgroundColor: "rgba(0, 0, 0, 0.5)" }}
+          style={{ backgroundColor: "rgba(0, 0, 0, 0.65)" }}
         >
           <Container maxW={["80%", "65%", "60%", "40%"]}>
             <Center color="white">

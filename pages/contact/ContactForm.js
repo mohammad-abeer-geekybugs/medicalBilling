@@ -8,6 +8,7 @@ import {
   useToast,
   FormHelperText,
   Textarea,
+  Container,
 } from "@chakra-ui/react";
 
 const validate = (values) => {
@@ -37,61 +38,76 @@ const ContactForm = () => {
     onSubmit: (values) => {
       toast({
         title: "Submitted",
-        description: "Suxxessfully Sibmitted",
+        description: "Your message has been sent",
         status: "success",
         duration: 9000,
+        position: "top",
       });
     },
   });
   return (
-    <form onSubmit={formik.handleSubmit} style={{ textAlign: "center" }}>
-      <FormControl>
-        <FormLabel htmlFor="userName">Name</FormLabel>
-        <Input
-          id="userName"
-          name="userName"
-          type="text"
-          onChange={formik.handleChange}
-          onBlur={formik.handleBlur}
-          value={formik.values.userName}
-        />
-        {formik.touched.userName && formik.errors.userName ? (
-          <FormHelperText color="gold">{formik.errors.userName}</FormHelperText>
-        ) : null}
-      </FormControl>
-      <FormControl>
-        <FormLabel htmlFor="email">Email</FormLabel>
-        <Input
-          id="email"
-          name="email"
-          type="email"
-          onChange={formik.handleChange}
-          onBlur={formik.handleBlur}
-          value={formik.values.email}
-        />
-        {formik.touched.email && formik.errors.email ? (
-          <FormHelperText color="gold">{formik.errors.email}</FormHelperText>
-        ) : null}
-      </FormControl>
-      <FormControl>
-        <FormLabel htmlFor="message">Message</FormLabel>
-        <Textarea
-          id="message"
-          name="message"
-          type="text"
-          onChange={formik.handleChange}
-          onBlur={formik.handleBlur}
-          value={formik.values.message}
-        />
-      </FormControl>
-      <Button
-        mt="1rem"
-        type="submit"
-        _hover={{ backgroundColor: "#242424", color: "White" }}
-      >
-        Submit
-      </Button>
-    </form>
+    <Container
+      maxW={["90%", "90%", "60%", "40%"]}
+      boxShadow="0px 3px 17px 1px lightgray"
+      borderRadius="6px"
+      p="2rem"
+      mt="4rem"
+    >
+      <form onSubmit={formik.handleSubmit} style={{ textAlign: "center" }}>
+        <FormControl>
+          <FormLabel htmlFor="userName">Name</FormLabel>
+          <Input
+            id="userName"
+            name="userName"
+            type="text"
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            value={formik.values.userName}
+          />
+          {formik.touched.userName && formik.errors.userName ? (
+            <FormHelperText color="#e96c05">
+              {formik.errors.userName}
+            </FormHelperText>
+          ) : null}
+        </FormControl>
+        <FormControl>
+          <FormLabel htmlFor="email">Email</FormLabel>
+          <Input
+            id="email"
+            name="email"
+            type="email"
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            value={formik.values.email}
+          />
+          {formik.touched.email && formik.errors.email ? (
+            <FormHelperText color="#e96c05">
+              {formik.errors.email}
+            </FormHelperText>
+          ) : null}
+        </FormControl>
+        <FormControl>
+          <FormLabel htmlFor="message">Message</FormLabel>
+          <Textarea
+            id="message"
+            name="message"
+            type="text"
+            onChange={formik.handleChange}
+            onBlur={formik.handleBlur}
+            value={formik.values.message}
+          />
+        </FormControl>
+        <Button
+          bgColor="#e96c05"
+          color="white"
+          mt="1rem"
+          type="submit"
+          _hover={{ backgroundColor: "#242424", color: "White" }}
+        >
+          Submit
+        </Button>
+      </form>
+    </Container>
   );
 };
 
