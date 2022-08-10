@@ -1,11 +1,8 @@
 import {
   Box,
   Heading,
-  Wrap,
-  WrapItem,
   Text,
   Container,
-  Center,
   Stack,
   Grid,
   GridItem,
@@ -31,7 +28,6 @@ const ServicesWeSpecializeIn = () => {
             "repeat(4, 1fr)",
           ]}
           gap={6}
-          // spacing={["15px", "15px", "15px", "30px"]}
         >
           {data.map((item, index) => {
             return (
@@ -50,14 +46,16 @@ const ServicesWeSpecializeIn = () => {
                     style={{ backgroundColor: "rgba(0, 0, 0, 0.7)" }}
                     minH={["100px", "150px", "200px", "250px"]}
                     onMouseEnter={() => {
-                      const newData = _.cloneDeep(data);
-                      newData[index].isHovering = true;
-                      setData(newData);
+                      setData((prevData) => {
+                        prevData[index].isHovering = true;
+                        return [...prevData];
+                      });
                     }}
                     onMouseLeave={() => {
-                      const newData = _.cloneDeep(data);
-                      newData[index].isHovering = false;
-                      setData(newData);
+                      setData((prevData) => {
+                        prevData[index].isHovering = false;
+                        return [...prevData];
+                      });
                     }}
                   >
                     <Heading

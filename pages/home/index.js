@@ -10,27 +10,21 @@ const Home = () => {
   return (
     <>
       <Box
-        minH={["40vh", "50vh", "60vh", "70vh"]}
         bgImage={coverImg.src}
         opacity="85%"
         bgRepeat="no-repeat"
         bgPos="center"
         bgSize="cover"
       >
-        <Box
-          minH={["40vh", "50vh", "60vh", "70vh"]}
-          style={{ backgroundColor: "rgba(0, 0, 0, 0.65)" }}
-        >
+        <Box style={{ backgroundColor: "rgba(0, 0, 0, 0.65)" }}>
           <Container maxW={["80%", "65%", "60%", "40%"]}>
             <Center color="white">
-              <Heading
-                size={["lg", "xl", "3xl", "4xl"]}
-                mt={["40%", "20%", "20%", "30%"]}
-                textAlign="center"
-              >
-                Crush the <span style={themeColor}>friction</span> that's
-                holding healthcare back.
-              </Heading>
+              <Box my={["2rem", "4rem", "6rem", "8rem"]}>
+                <Heading size={["lg", "xl", "2xl", "3xl"]} textAlign="center">
+                  Crush the <span style={themeColor}>friction</span> that's
+                  holding healthcare back.
+                </Heading>
+              </Box>
             </Center>
           </Container>
         </Box>

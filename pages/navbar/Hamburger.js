@@ -1,111 +1,79 @@
+import {
+  Box,
+  Button,
+  Flex,
+  Icon,
+  IconButton,
+  Menu,
+  MenuButton,
+  MenuItem,
+  MenuList,
+  Text,
+} from "@chakra-ui/react";
+import Link from "next/link";
 import React from "react";
+import styles from "./styles.module.scss";
+import { HamburgerIcon } from "@chakra-ui/icons";
+const Hamburger = () => {
+  const [display, changeDisplay] = React.useState("none");
 
-import { navLinks } from "../../constants/constants";
-import medicalBillingLogo from "../../images/medicalBillingLogo.png";
-
-import { Flex, Button, IconButton } from "@chakra-ui/react";
-import NextLink from "next/link";
-import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
-const Hamburger = (changeDisplay) => {
-  //   const [display, changeDisplay] = React.useState("none");
+  const myFunction = () => {
+    if (display === "flex") changeDisplay("none");
+    else {
+      changeDisplay("flex");
+    }
+  };
+  console.log(display);
   return (
     <>
-      {/* Mobile Content */}
-      {/* <Flex
-        w="100vw"
-        display={display}
-        bgColor="gray.50"
-        zIndex={20}
-        h="100vh"
-        pos="fixed"
-        top="0"
-        left="0"
-        overflowY="auto"
-        flexDir="column"
-      > */}
-      <Flex justify="flex-end">
-        <IconButton
-          mt={2}
-          mr={2}
-          aria-label="Open Menu"
-          size="lg"
-          icon={<CloseIcon />}
-          onClick={() => changeDisplay("none")}
-        />
-      </Flex>
+      <Box
+        className={styles.mobileContainer}
+        display={["flex", "flex", "none", "none"]}
+      >
+        {/* <!-- Top Navigation Menu --> */}
+        <Menu>
+          <MenuButton
+            className={styles.buttonColorOverride}
+            icon={<HamburgerIcon />}
+            color="#242424"
+            as={IconButton}
+            onClick={() => myFunction()}
+          />
+          <MenuList className={styles.topnav}>
+            {display === "flex" && (
+              <Flex id="myLinks" direction="column">
+                <Link href="/">
+                  <MenuItem>Home</MenuItem>
+                </Link>
+                <Link href="/about">
+                  <MenuItem>About</MenuItem>
+                </Link>
+                <Link href="/services">
+                  <MenuItem>Services</MenuItem>
+                </Link>
+                <Link href="/contact">
+                  <MenuItem>Contact</MenuItem>
+                </Link>
+              </Flex>
+            )}
+          </MenuList>
+        </Menu>
 
-      <Flex flexDir="column" align="center">
-        <NextLink href="/" passHref>
-          <Button as="a" variant="ghost" aria-label="Home" my={5} w="100%">
-            Home
-          </Button>
-        </NextLink>
+        {/* <Box style={{ paddingLeft: "16px" }}>
+          <h3>Vertical Mobile Navbar</h3>
+          <p>
+            This example demonstrates how a navigation menu on a mobile/smart
+            phone could look like.
+          </p>
+          <p>
+            Click on the hamburger menu (three bars) in the top right corner, to
+            toggle the menu.
+          </p>
+        </Box> */}
 
-        <NextLink href="/about" passHref>
-          <Button as="a" variant="ghost" aria-label="About" my={5} w="100%">
-            About
-          </Button>
-        </NextLink>
-
-        <NextLink href="/contact" passHref>
-          <Button as="a" variant="ghost" aria-label="Contact" my={5} w="100%">
-            Contact
-          </Button>
-        </NextLink>
-      </Flex>
-      {/* </Flex> */}
+        {/* <!-- End smartphone / tablet look --> */}
+      </Box>
     </>
   );
 };
-
 export default Hamburger;
-
-//     <Flex display={["flex", "flex", "flex", "none"]}>
-//       <Box flex="3" textAlign="-webkit-center">
-//         <Link href="/">
-//           <Image src={medicalBillingLogo.src} width="10%" cursor="pointer" />
-//         </Link>
-//       </Box>
-
-//       <Flex direction="column" overflowY="auto">
-//         <Menu>
-//           <MenuButton
-//             as={IconButton}
-//             aria-label="Options"
-//             icon={<HamburgerIcon />}
-//             variant="outline"
-//             backgroundColor="green"
-//             onClick={""}
-//           />
-//           {navLinks.map((item, index) => {
-//             return (
-//               <MenuList
-//                 key={index}
-//                 backgroundColor="gray"
-//                 style={
-//                   activeState === item.name || activeState === item.path
-//                     ? activeStyle
-//                     : inactiveStyle
-//                 }
-//               >
-//                 <Link href={item.path}>
-//                   <MenuItem cursor="pointer" _hover={activeStyle}>
-//                     {item.name}
-//                   </MenuItem>
-//                 </Link>
-//               </MenuList>
-//             );
-//           })}
-//         </Menu>
-//       </Flex>
-//     </Flex>
-
-// /* --------------------------------- */
-// <IconButton
-//           aria-label="Open Menu"
-//           size="lg"
-//           mr={2}
-//           icon={<HamburgerIcon />}
-//           onClick={() => changeDisplay("flex")}
-//           display={["flex", "flex", "none", "none"]}
-//         />

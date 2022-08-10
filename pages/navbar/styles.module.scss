@@ -1,0 +1,22 @@
+ .mobileContainer {
+   max-width: 100%;
+   margin: auto;
+   border-radius: 10px;
+   
+ }
+
+ .topnav { 
+   overflow: hidden;
+   position: relative;
+ }
+
+ .topnav #myLinks {
+   display: none;
+ }
+
+ .topnav p {
+   padding: 14px 16px;
+   text-decoration: none;
+   font-size: 17px;
+   display: block;
+ }

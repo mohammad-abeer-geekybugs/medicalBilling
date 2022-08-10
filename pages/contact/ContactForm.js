@@ -55,7 +55,7 @@ const ContactForm = () => {
     >
       <form onSubmit={formik.handleSubmit} style={{ textAlign: "center" }}>
         <FormControl>
-          <FormLabel htmlFor="userName">Name</FormLabel>
+          <FormLabel htmlFor="userName">Name*</FormLabel>
           <Input
             id="userName"
             name="userName"
@@ -71,7 +71,7 @@ const ContactForm = () => {
           ) : null}
         </FormControl>
         <FormControl>
-          <FormLabel htmlFor="email">Email</FormLabel>
+          <FormLabel htmlFor="email">Email*</FormLabel>
           <Input
             id="email"
             name="email"
@@ -87,7 +87,7 @@ const ContactForm = () => {
           ) : null}
         </FormControl>
         <FormControl>
-          <FormLabel htmlFor="message">Message</FormLabel>
+          <FormLabel htmlFor="message">Message*</FormLabel>
           <Textarea
             id="message"
             name="message"
