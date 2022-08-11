@@ -6,7 +6,7 @@ import revenueCycleManagement from "../../images/RevenueCycleManagement.png";
 const CycleManagement = () => {
   return (
     <>
-      <Container maxW="85%" my="2rem">
+      <Container maxW={["100%", "", "", "85%"]} my="2rem">
         <Heading textAlign="center" my="2rem">
           Revenue Cycle Management Services
         </Heading>

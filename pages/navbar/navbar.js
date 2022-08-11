@@ -26,7 +26,7 @@ const inactiveStyleMobile = {
 const Navbar = () => {
   const router = useRouter();
   const [activeState, setActiveState] =
-    useState(""); /* For Path Styling in Navbar*/
+    useState(""); /* For active Path Styling in Navbar*/
 
   useEffect(() => {
     setActiveState(router.pathname);
@@ -66,7 +66,7 @@ const Navbar = () => {
                     <Text
                       cursor="pointer"
                       _hover={activeStyle}
-                      fontSize={["12px", "14px"]}
+                      fontSize={["12px", "14px", "16px", "18px"]}
                     >
                       {link.name}
                     </Text>
@@ -108,7 +108,6 @@ const Navbar = () => {
                           <MenuItem
                             cursor="pointer"
                             _hover={activeStyle}
-                            _active={inactiveStyleMobile}
                             _focus={{ backgroundColor: "transparent" }}
                             fontSize={["12px", "14px"]}
                           >

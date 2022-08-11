@@ -6,7 +6,9 @@ import rcmServicesCard from "../images/rcmServicesCard.jpg";
 import user1 from "../images/aboutUser1.jpg";
 import user2 from "../images/aboutUser2.jpg";
 import user3 from "../images/aboutUser3.jpg";
-
+import ourMission from "../images/our-mission.jpg";
+import ourValues from "../images/our-values.jpg";
+import ourVision from "../images/our-vision.jpg";
 export const navLinks = [
   {
     name: "Home",
@@ -145,30 +147,6 @@ export const servicesWeProvide = [
   },
 ];
 
-export const contactData = [
-  {
-    area: "California",
-    country: "USA",
-    phone: "+1 925 818 1066",
-    email: "alexis.rankin@geekybugs.com",
-    address: "1333 Howe Ave, Sacramento",
-  },
-  {
-    area: "Lahore",
-    country: "Pakistan",
-    phone: "+92 322 460 8989",
-    email: "muhammad.asad@geekybugs.com",
-    address: "2/7, Niaz View, Chuburji",
-  },
-  {
-    area: "London",
-    country: "UK",
-    phone: "*Please provide number*",
-    email: "uk@geekybugs.com",
-    address: "*Please provide address*",
-  },
-];
-
 export const whyMedicalBilling = [
   "Collaborative Methodology",
   "Confidentiality",
@@ -205,5 +183,23 @@ export const ourLeaders = [
     name: "User 3",
     description: "user 3, has info3, came from Lahore",
     link: "SEE MORE",
+  },
+];
+
+export const dataAbout = [
+  {
+    img: ourMission.src,
+    title: "Our Mission",
+    desc: "Providing specialty-focused, innovative outsourcing services and solutions for transitioning healthcare to value-based care while efficiently managing insurance and patient financials.",
+  },
+  {
+    img: ourVision.src,
+    title: "Our Vision",
+    desc: "Being a trusted partner of choice by providing one-stop, technology-enabled, value driven healthcare solutions and services that enhance DME/HME, physician and medical practice growth and profitability.",
+  },
+  {
+    img: ourValues.src,
+    title: "Our Values",
+    desc: "A client-centered approach that is both innovative and creative and focuses on accountability, ownership, teamwork, flexibility, trust, respect, and integrity, while helping to grow your business.",
   },
 ];
